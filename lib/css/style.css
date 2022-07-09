@@ -1,0 +1,210 @@
+@charset "UTF-8";
+
+html {
+  height: 100%;
+  font-size: 10px;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.8;
+   
+}
+
+/* ???  レイアウトが崩れないように記述？→　解決しました。*/
+* {
+  word-break: normal !important;
+  word-wrap: break-word;
+}
+
+main {
+  display: block;
+}
+
+.l-wrapper {
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.l-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  margin-bottom: 50px;
+  padding: 10px 0;
+  background-color: #fff;
+  border: 1px solid #000;
+  z-index: 9999;
+}
+
+.l-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.l-headerLogo {
+  /* CSSを追加しましょう */
+  /* ロゴ指定サイズ {border: 1px solid #000, padding:15px 100px} */
+  padding: 15px 100px;
+  border: 1px solid #000;
+}
+
+.l-headerList {
+  /* CSSを追加しましょう */
+  display: flex;
+}
+
+.l-headerList__item {
+  margin: 0px 15px;  /* リンク」毎の横幅は15px */
+}
+
+.l-headerList__item a {
+  /* CSSを追加しましょう */ 
+  text-decoration: underline;/* 下線の追加 */ 
+}
+
+.l-footer {
+  background-color: #eee;
+}
+
+.l-footerCopyright {
+  padding: 15px 0;
+  text-align: right;
+}
+
+.p-topNews {
+  margin: 0 0 50px;
+}
+
+.p-topNews__inner {
+  box-sizing: border-box;
+  max-height: 300px;
+  padding: 30px 20px;
+  border: 1px solid #000;
+  overflow: auto;
+}
+
+.p-topNewsTitle {
+  margin: 0 0 10px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.p-topNewsList__item {
+    /* CSSを追加しましょう */
+    display: flex;
+    align-items: flex-end;/* http://www.htmq.com/css/align-items.shtml */
+    border-bottom: 1px solid black;    
+    box-sizing: border-box;
+
+    /* 
+    border自体に長さを指定することはできない 
+    divタグというのは、何も指定しないと横いっぱいに広がってしまいます
+    https://saruwakakun.com/html-css/reference/border-length
+    width: 200px;   長さを変える場合、幅を設定する 
+    */
+    margin-top: 20px;  /* .p-topNewsList__time -> 縦の間隔20px */
+    line-height: 1.5;/*1.5remと1.5の記述の違いについて。 https://qiita.com/4cres/items/5ab4b07e6b5cdfc8f799縦幅1.5 ,https://parashuto.com/rriver/development/line-height-in-web-design#line-height-100-percent */
+}
+
+.p-topNewsList__time {
+    /* CSSを追加しましょう */
+    margin-right: 30px; /* 新着情報 縦の間隔30px */
+    
+
+}
+
+.p-topNewsList__text {
+  width: calc(100% - 130px);
+}
+
+.p-topBoxs {
+  margin: 0 0 50px;
+}
+
+.p-topBoxsList {
+    /* CSSを追加しましょう */
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.p-topBoxsList__item {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  min-height: 250px;
+  border: 1px solid #aaa;
+}
+
+.p-topBoxsList__item:nth-of-type(1) {
+  background-color: lightgoldenrodyellow;
+}
+
+.p-topBoxsList__item:nth-of-type(2) {
+  background-color: lightgreen;
+}
+
+.p-topBoxsList__item:nth-of-type(3) {
+  background-color: lightskyblue;
+}
+
+.p-topContact {
+  margin: 0 0 100px;
+}
+
+.p-topContact__inner {
+  display: flex;
+}
+
+.p-topContact__left {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45%;
+  min-height: 250px;
+  border: 1px solid #000;
+  border-right: none;
+}
+
+.p-topContact__right {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55%;
+  min-height: 250px;
+  border: 1px solid #000;
+}
+
+.p-topContactTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.p-topContactBtn a {
+  cursor: pointer;
+  /* CSSを追加しましょう */
+  /* float　→　flexboxに記述変更 */
+  border: 1px solid #000;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 350px;/* 横の幅　最大値　350px */
+  min-height: 100px;  /* 縦の幅　最小値 100px */
+}
+
+.p-topContactBtn a:hover {
+  opacity: 0.8;
+}
+
