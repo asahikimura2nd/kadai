@@ -109,7 +109,7 @@ main {
     https://saruwakakun.com/html-css/reference/border-length
     width: 200px;   長さを変える場合、幅を設定する 
     */
-    margin-top: 20px;  /* .p-topNewsList__time -> 縦の間隔20px */
+    margin-bottom: 20px;  /* .p-topNewsList__time -> 縦の間隔20px */
     line-height: 1.5;/*1.5remと1.5の記述の違いについて。 https://qiita.com/4cres/items/5ab4b07e6b5cdfc8f799縦幅1.5 ,https://parashuto.com/rriver/development/line-height-in-web-design#line-height-100-percent */
 }
 
